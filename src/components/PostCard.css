@@ -1,0 +1,8 @@
+.card{
+    min-height: 100%;
+    width: 70%;
+    border: 1px solid red;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

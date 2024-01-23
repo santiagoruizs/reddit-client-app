@@ -1,10 +1,12 @@
-
+import Header from './features/Header/Header';
+import Home from './features/Home/Home';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <p>El mejor Reddir client que veras</p>
+      <Header />
+      <Home />
     </div>
   );
 }
