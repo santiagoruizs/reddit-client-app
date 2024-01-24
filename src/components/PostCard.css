@@ -1,8 +1,57 @@
 .card{
     min-height: 100%;
     width: 70%;
-    border: 1px solid red;
-    text-align: center;
+    box-shadow: 2px 2px 2px 2px gray;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+img{
+    height: 60%;
+    width: 60%;
+    margin: 1.5rem;
+}
+h1{
+    text-align: left;
+    margin: 1.5rem;
+}
+.img-uv-container{
+    display: flex;
+    flex-direction: row;
+    
+}
+.post-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.upvotes{
+    margin: 1.5rem;
+}
+.comment{
+    width: 16px;
+    height: 16px;
+}
+.arrow{
+    width: 50px;
+    height: 50px;
+}
+.arrow-down{
+    width: 50px;
+    height: 50px;
+    transform:  scaleX(-1) scaleY(-1);
+}
+.comment-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+.upvotes{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
