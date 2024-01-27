@@ -1,0 +1,16 @@
+.sr{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+}
+.icon{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.sr:hover{
+    background-color: whitesmoke;
+}
