@@ -4,7 +4,7 @@ const SubReddits = (props) => {
     iconUrl = iconUrl[0] ? iconUrl[0] : ''
     return (
         <div className='sr' onClick={() => props.handleClick(props.name)}>
-            <img src={iconUrl} className='icon'/>
+            <img alt='logo' src={iconUrl} className='icon'/>
             <p>{props.name}</p>
         </div>
     )

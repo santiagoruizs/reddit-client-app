@@ -31,17 +31,17 @@ const PostCard = (props) => {
         <div className="card">
             <h1>{props.title}</h1>
             {!(props.thumbnail === 'self' )&&(
-            <img className='post-image' src={props.imgUrl} /> )}
+            <img alt="" className='post-image' src={props.imgUrl} /> )}
             <div className='post-footer'>
                  <div className='upvotes'>
-                    <img className='arrow down' src={arrowIcon}/>
+                    <img alt='arrow1' className='arrow down' src={arrowIcon}/>
                     <p className='upvotes'>{props.ups}</p>
-                    <img className='arrow' src={arrowIcon}/>
+                    <img alt='arrow2' className='arrow' src={arrowIcon}/>
                  </div>
                 <p>{props.author}</p>
                 <p>{timeElapsed}</p>
                 <div className='comment-container' onClick={handleToggleComments}> 
-                    <img src={commentIcon} className='comment'/>
+                    <img alt='comment' src={commentIcon} className='comment'/>
                     <p className='num-comments  '>{props.numComments}</p> 
                 </div> 
                       

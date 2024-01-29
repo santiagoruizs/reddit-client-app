@@ -13,7 +13,6 @@ const Home = () => {
     //const [ posts, setPosts ] = useState([])
     //const [ subreddits, setSubreddits ] = useState([])
     const [ filter, setFilter ] = useState('')
-    const [ displayPosts, setDisplayPosts ] = useState([])
     const dispatch = useDispatch();
     const posts = useSelector(selectPosts)
     const subReddits = useSelector(selectSubreddits)
