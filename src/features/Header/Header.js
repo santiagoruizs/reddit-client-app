@@ -1,10 +1,7 @@
 import redditIcon from '../../resources/reddit-logo-2436.png'
 import './Header.css';
-import { UseDispatch, useDispatch } from 'react-redux';
-import { getSearchPosts } from '../../components/PostCard/postCardSlice';
 
 const Header = (props) => {
-    const dispatch = useDispatch();
     return (
         <div className='header'>
             <div className='logo-container' onClick={props.handleHomeClick}>
