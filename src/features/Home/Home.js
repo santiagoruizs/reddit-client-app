@@ -15,33 +15,24 @@ const Home = () => {
     const [ filter, setFilter ] = useState('')
     const [ displayPosts, setDisplayPosts ] = useState([])
     const dispatch = useDispatch();
-
     const posts = useSelector(selectPosts)
     const subReddits = useSelector(selectSubreddits)
+    
     const handleSearch = () => {
-        filter ? setDisplayPosts(posts.filter(post => post.data.title.includes(filter))) : setDisplayPosts(posts)
+        //filter ? setDisplayPosts(posts.filter(post => post.data.title.includes(filter))) : setDisplayPosts(posts)
+        const endpoint = filter !== '' ? 'search.json?q='+encodeURIComponent(filter) : ''
+        console.log(endpoint)
+        dispatch(getPosts(endpoint))
     }
-    // const getPopularPosts = async() => {
-    //     const response = await fetch('https://www.reddit.com/r/popular.json')
-    //     const json = await response.json()
-    //     const feed = json.data.children
-    //     console.log(json.data.children)
-    //     setPosts(feed) 
-    //     setDisplayPosts(feed)
-    // }
+
     const getSubredditPosts = (sr) => {
-        console.log('hey')
-        dispatch(getPosts(sr))
+        const url = sr + '.json'
+        dispatch(getPosts(url))
     }
     const handleHomeClick = async() => {
         dispatch(getPosts(''))
     }
-    // const getPopularSubreddits = async() => {
-    //     const response = await fetch('https://www.reddit.com/subreddits.json')
-    //     const json = await response.json()
-    //     const sr = json.data.children
-    //     setSubreddits(sr) 
-    // }
+
     useEffect(()=> {
         dispatch(getPosts(''))
         dispatch(getSubreddits())
@@ -57,10 +48,12 @@ const Home = () => {
     }
     return (
         <div className="app">
-            <Header setFilter = {setFilter} filter = {filter} handleSearch={handleSearch} handleHomeClick={handleHomeClick}/>
+            <Header setFilter = {setFilter} filter = {filter} handleHomeClick={handleHomeClick} handleSearch={handleSearch}/>
             <div className="body-container">
                 <div className="posts-container">
-                    {posts.posts.map(post => <PostCard 
+                    {posts.posts.map((post,i) => (!post.data.is_video &&(post.data.is_reddit_media_domain 
+                    || post.data.is_self)
+                    ) && (<PostCard 
                                                 imgUrl = {post.data.url} 
                                                 title = {post.data.title} 
                                                 ups={post.data.ups} 
@@ -68,7 +61,13 @@ const Home = () => {
                                                 numComments={post.data.num_comments} 
                                                 created ={post.data.created}
                                                 isVideo = {post.data.is_video}
-                                                />)}
+                                                thumbnail = {post.data.thumbnail}
+                                                permalink = {post.data.permalink}
+                                                index={i}
+                                                coments = {post.comments}
+                                                loadingComments = {post.loadingComments}
+                                                showingComments = {post.showingComments}
+                                                />))}
                 </div>
                 <div className="subreddit-container">
                     {subReddits.subReddits.map(sr => <SubReddits name = {sr.data.display_name_prefixed} icon = {sr.data.community_icon} handleClick = {getSubredditPosts}/>)}

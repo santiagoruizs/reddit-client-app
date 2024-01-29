@@ -1,0 +1,26 @@
+.comment-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 20%;
+    margin: 1.5rem auto;
+    padding: 0 2rem;
+    background-color: rgb(250, 250, 250);
+    border-radius: 25px;
+}
+.comment-box:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.comment-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.comment-text{
+    height: 100%;
+    width : 90%;
+}
