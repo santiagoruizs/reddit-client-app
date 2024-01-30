@@ -63,7 +63,7 @@ const Home = () => {
                                                 thumbnail = {post.data.thumbnail}
                                                 permalink = {post.data.permalink}
                                                 index={i}
-                                                coments = {post.comments}
+                                                comments = {post.comments}
                                                 loadingComments = {post.loadingComments}
                                                 showingComments = {post.showingComments}
                                                 />))}

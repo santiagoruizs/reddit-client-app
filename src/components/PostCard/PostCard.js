@@ -21,8 +21,10 @@ const PostCard = (props) => {
         if (props.loadingComments){
             return(<p>Loading</p>)
         }else{
+            console.log('a')
+            console.log(props.comments)
             for(let i = 0; i<= 3; i++ ){
-                c.push(<Comments body={props.comments.body} author={props.comments.author} created= {props.comments.created}/>)
+                c.push(<Comments body={props.comments[i].data.body} author={props.comments[i].data.author} created= {props.comments[i].data.created}/>)
             }
         }
         return c

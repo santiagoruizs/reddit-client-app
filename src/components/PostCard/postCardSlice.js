@@ -78,7 +78,7 @@ export const getComments = (index, permalink) => async (dispatch) => {
         const json = await response.json()
         const comments = json[1].data.children
         console.log(comments)
-        dispatch(getCommentsSuccess(index, comments))
+        dispatch(getCommentsSuccess({index, comments}))
     }catch(error){
     console.error('Error:', error);
     }
