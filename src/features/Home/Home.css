@@ -3,7 +3,7 @@
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     font-size: 1rem;
     background-color: whitesmoke;
   }
@@ -11,15 +11,19 @@
 .body-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 .posts-container {
   display: flex;
   flex-direction: column;
+  width: 70%;
 }
 .subreddit-container{
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
   height: 70%;
-  width: 40vh;
+  width: 20vw;
+  min-width: 250px;
   margin: 2rem;
   border-radius: 25px;
   background-color: white;
@@ -47,5 +51,11 @@
   }
   to {
       transform:rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 900px){
+  .subreddit-container{
+    display: none;
   }
 }

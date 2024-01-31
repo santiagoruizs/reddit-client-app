@@ -6,7 +6,7 @@ const Header = (props) => {
         <div className='header'>
             <div className='logo-container' onClick={props.handleHomeClick}>
                 <img alt='logo' className='logo' src={redditIcon} />
-                <p>Reddit Client</p>
+                <p className='logo-text'>Reddit Client</p>
             </div>
             <form onSubmit={(e) => {
                 e.preventDefault()
