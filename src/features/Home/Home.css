@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   width: 80vw;
-  min-width: 400px;
   margin: 2rem;
 }
 .subreddit-container{
