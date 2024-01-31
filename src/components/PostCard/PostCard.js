@@ -1,5 +1,6 @@
 import './PostCard.css'
 import commentIcon from '../../resources/comment.png'
+import redditIcon from '../../resources/reddit-logo-2436.png'
 import arrowIcon from '../../resources/up-arrow.png'
 import Comments from '../Comments/Comments'
 import { useDispatch } from 'react-redux';
@@ -19,7 +20,9 @@ const PostCard = (props) => {
     const renderComments = () => {
         const c = []
         if (props.loadingComments){
-            return(<p>Loading</p>)
+            return(<div className="comments-spinner-container">
+            <img className='comments-spinner' src={redditIcon} alt='Loading'/>
+        </div>)
         }else{
             console.log('a')
             console.log(props.comments)
@@ -32,7 +35,7 @@ const PostCard = (props) => {
     return (
         <div className="card">
             <h1>{props.title}</h1>
-            {!(props.thumbnail === 'self' )&&(
+            {!(props.thumbnail === 'self' || props.thumbnail === 'spoiler' )&&(
             <img alt="" className='post-image' src={props.imgUrl} /> )}
             <div className='post-footer'>
                  <div className='upvotes'>

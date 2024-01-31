@@ -8,6 +8,7 @@ import { getPosts } from "../../components/PostCard/postCardSlice";
 import { getSubreddits } from "../../components/SubReddits/subRedditsSlice";
 import { selectSubreddits } from "../../components/SubReddits/subRedditsSlice";
 import { selectPosts } from "../../components/PostCard/postCardSlice";
+import redditIcon from '../../resources/reddit-logo-2436.png'
 
 const Home = () => {
     //const [ posts, setPosts ] = useState([])
@@ -37,11 +38,14 @@ const Home = () => {
         dispatch(getSubreddits())
     },[dispatch])
 
-    if(posts.isLoading || subReddits.isLoading){
+     if(posts.isLoading || subReddits.isLoading){
+        //if(true){
         return (
         <div>
             <Header setFilter = {setFilter} filter = {filter} handleSearch={handleSearch} handleHomeClick={handleHomeClick}/>
-            <p>loading</p>
+            <div className="spinner-container">
+                <img className='spinner' src={redditIcon} alt='Loading'/>
+            </div>
         </div>
         )
     }
