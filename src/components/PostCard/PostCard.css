@@ -27,27 +27,28 @@ img{
     margin: 1rem;
 }
 h1{
-    font-size: 3vw;
+    font-size: calc(12px + 1.5vw);
     text-align: left;
     width: 90%;
 }
 p{
-    font-size: 1.3vw;
+    font-size: calc(6px + 1vw);
 }
 .post-footer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 95%;
+
 }
-.comment{
-    width: 16px;
-    height: 16px;
-}
+
 .arrow{
-    width: 25px;
-    height: 25px;
+    min-width: 12px;
+    min-height: 12px;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0cap;
 }
 .down{
     transform:  scaleX(-1) scaleY(-1);
@@ -56,10 +57,20 @@ p{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content:center;
     cursor: pointer;
     padding: 0 1rem;
     border-radius: 25px;
-
+}
+.comment-container p{
+    margin: 1vw;
+}
+.comment{
+    min-width: 10px;
+    min-height: 10px;
+    width: 1.3vw;
+    height: 1.3vw;
+    margin: 1vw;
 }
 .comment-container:hover{
     background-color: whitesmoke;
@@ -69,6 +80,9 @@ p{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+.upvotes p{
+    margin: 0.8vw;
 }
 .comments-section{
     width: 100%;

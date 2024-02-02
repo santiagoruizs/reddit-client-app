@@ -61,5 +61,9 @@
   }
   .body-container {
     justify-content: center;
+    width: 110vw;
+  }
+  .posts-container{
+    width: 100vw;
   }
 }

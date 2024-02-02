@@ -11,7 +11,7 @@ const PostCard = (props) => {
     const date = new Date(props.created*1000)
     const now = new Date()
     const dateDiff = (now-date)/(1000*60*60*24)
-    const timeElapsed = dateDiff < 1 ? 'Less than one day ago' : `${Math.round(dateDiff)} days ago`
+    const timeElapsed = dateDiff < 1 ? 'Less than one day ago' : `${Math.round(dateDiff)} day${Math.round(dateDiff) >=2 ? 's':''} ago`
 
     const handleToggleComments = () => {
         dispatch(getComments(props.index, props.permalink))
@@ -40,7 +40,7 @@ const PostCard = (props) => {
             <div className='post-footer'>
                  <div className='upvotes'>
                     <img alt='arrow1' className='arrow down' src={arrowIcon}/>
-                    <p className='upvotes'>{props.ups}</p>
+                    <p>{props.ups}</p>
                     <img alt='arrow2' className='arrow' src={arrowIcon}/>
                  </div>
                 <p>{props.author}</p>
