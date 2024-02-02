@@ -40,7 +40,6 @@ p{
     justify-content: space-around;
     align-items: center;
     width: 95%;
-
 }
 
 .arrow{
@@ -48,7 +47,7 @@ p{
     min-height: 12px;
     width: 1.5vw;
     height: 1.5vw;
-    margin: 0cap;
+    margin: 0;
 }
 .down{
     transform:  scaleX(-1) scaleY(-1);
@@ -80,6 +79,7 @@ p{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem;
 }
 .upvotes p{
     margin: 0.8vw;
