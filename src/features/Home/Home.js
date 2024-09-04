@@ -8,7 +8,7 @@ import { getPosts } from "../../components/PostCard/postCardSlice";
 import { getSubreddits } from "../../components/SubReddits/subRedditsSlice";
 import { selectSubreddits } from "../../components/SubReddits/subRedditsSlice";
 import { selectPosts } from "../../components/PostCard/postCardSlice";
-import redditIcon from '../../resources/reddit-logo-2436.png'
+import redditIcon from '../../resources/reddit-logo-2436.svg'
 
 const Home = () => {
     //const [ posts, setPosts ] = useState([])

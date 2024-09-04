@@ -4,13 +4,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
+    /* padding:10px; */
 }
 .logo{
     
-    height: 32px;
-    width: 32px;
+    height: 50px;
+    width: 50px;
 }
 .logo-container{
     display: flex;
@@ -27,18 +28,27 @@
 .logo-container:hover{
     background-color: whitesmoke;
 }
+.form{
+    /* border:solid red 1px; */
+    display: flex;
+    align-items: center;
+    width: 40%;
+    min-width: 300px;
+}
 .search-bar{
-    width: 500px;
+    width: 90%;
+    margin: auto;
     height: 1rem;
     border-radius: 25px;
     border: gray 1px solid;
     padding: 10px;
+    /* margin-right: 30px; */
 }
 @media screen and (max-width: 700px){
     .logo-text{
       display: none;
     }
-    .search-bar{
+    /* .search-bar{
         width: 60vw;
-    }
+    } */
   }

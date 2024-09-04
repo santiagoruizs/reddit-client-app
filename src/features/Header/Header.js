@@ -1,4 +1,4 @@
-import redditIcon from '../../resources/reddit-logo-2436.png'
+import redditIcon from '../../resources/reddit-logo-2436.svg'
 import './Header.css';
 
 const Header = (props) => {
@@ -8,7 +8,9 @@ const Header = (props) => {
                 <img alt='logo' className='logo' src={redditIcon} />
                 <p className='logo-text'>Reddit Client</p>
             </div>
-            <form onSubmit={(e) => {
+            <form 
+                className='form'
+                onSubmit={(e) => {
                 e.preventDefault()
                 props.handleSearch()
             }}>

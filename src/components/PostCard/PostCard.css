@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 68vw;
+    /* width: 68vw; */
     margin-bottom: 2rem;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     border-radius: 25px;
@@ -98,8 +98,8 @@ p{
   }
   
   .comments-spinner {
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
     animation-name: spin;
     animation-duration: 1000ms;
     animation-iteration-count: infinite;

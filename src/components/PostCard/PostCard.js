@@ -1,6 +1,6 @@
 import './PostCard.css'
 import commentIcon from '../../resources/comment.png'
-import redditIcon from '../../resources/reddit-logo-2436.png'
+import redditIcon from '../../resources/reddit-logo-2436.svg'
 import arrowIcon from '../../resources/up-arrow.png'
 import Comments from '../Comments/Comments'
 import { useDispatch } from 'react-redux';
